@@ -1,8 +1,8 @@
 credentials        = "~/keys/polaris-test-keyfile.json"
 project_id         = "cloud-native-data"
-region             = "us-west3"
-zones              = ["us-west3-a", "us-west3-b", "us-west3-c"]
-name               = "polaris-test-06"
+region             = "us-west1"
+zones              = ["us-west1-a", "us-west1-b", "us-west1-c"]
+name               = "polaris-test-04"
 machine_type       = "n1-standard-2"
 min_count          = 1
 max_count          = 3

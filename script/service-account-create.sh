@@ -7,8 +7,9 @@
 #
 
 # Must set environmental variables:
-# export GCP_PROJECT_NAME=<my_project>
-# export GCP_SERVICE_ACCOUNT=<my_service_acct>
+#   export GCP_PROJECT_NAME=<my_project>
+#   export GCP_SERVICE_ACCOUNT=<my_service_acct>
+#   export GCP_REGION=<us-west1>
 
 PROJECT=${GCP_PROJECT_NAME}
 ACCOUNT=${GCP_SERVICE_ACCOUNT}
@@ -32,6 +33,7 @@ gcloud iam service-accounts create ${ACCOUNT} --display-name ${DISPLAY}
 # Add IAM policy bindings
 gcloud projects add-iam-policy-binding ${PROJECT} --member serviceAccount:${ACCOUNT}@${PROJECT}.iam.gserviceaccount.com --role roles/compute.viewer
 gcloud projects add-iam-policy-binding ${PROJECT} --member serviceAccount:${ACCOUNT}@${PROJECT}.iam.gserviceaccount.com --role roles/compute.instanceAdmin
+
 # if add_cluster_firewall_rules is true
 gcloud projects add-iam-policy-binding ${PROJECT} --member serviceAccount:${ACCOUNT}@${PROJECT}.iam.gserviceaccount.com --role roles/compute.securityAdmin
 

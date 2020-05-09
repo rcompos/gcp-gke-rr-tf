@@ -8,11 +8,12 @@
 #   export GCP_PROJECT_NAME=<my_project>
 #   export GCP_SERVICE_ACCOUNT=<my_service_acct>
 #   export GCP_REGION=<us-west1>
+#   export GCP_GKE_CLUSTER=<gke_cluster_name>
 
 PROJECT=${GCP_PROJECT_NAME}
 ACCOUNT=${GCP_SERVICE_ACCOUNT}
 REGION=${GCP_REGION}
-BUCKET_BASE=${ACCOUNT}
+BUCKET=${GCP_GKE_CLUSTER}
 
 if [ "$PROJECT" == "" ]; then
 	echo "Must set envvar GCP_PROJECT_NAME"
@@ -29,9 +30,12 @@ if [ "$REGION" == "" ]; then
 	exit 1
 fi
 
-set -x
+if [ "$BUCKET" == "" ]; then
+	echo "Must set envvar GCP_GKE_CLUSTER"
+	exit 1
+fi
 
-BUCKET="gs://${BUCKET_BASE}-${PROJECT}/"
+BUCKET="gs://${BUCKET}/"
 
 set -x
 
