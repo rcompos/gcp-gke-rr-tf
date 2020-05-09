@@ -1,7 +1,9 @@
 #!/usr/bin/env sh
-set -x
+set -euo pipefail
 
-PROJECT=scandalizer
-ACCOUNT=tf-gcp
+PROJECT=${GCP_PROJECT_NAME:-cloud-native-data}
+ACCOUNT=${GCP_SERVICE_ACCOUNT:-polaris-testbed}
+
+set -x
 
 gcloud iam service-accounts keys create ${ACCOUNT}-keyfile.json --iam-account=${ACCOUNT}@${PROJECT}.iam.gserviceaccount.com

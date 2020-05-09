@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    credentials = "~/keys/tf-gcp-keyfile.json"
-    bucket      = "gcp-gke-tf-scandalizer"
+    credentials = "~/keys/polaris-testbed-keyfile.json"
+    bucket      = "polaris-testbed-cloud-native-data"
     prefix      = "terraform/state"
   }
 }

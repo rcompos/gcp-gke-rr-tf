@@ -1,7 +1,8 @@
 module "gke" {
-  source                     = "terraform-google-modules/kubernetes-engine/google"
 
-  version                    = "v8.1.0"
+  #source                     = "terraform-google-modules/kubernetes-engine/google"
+  source                     = "terraform-google-modules/kubernetes-engine/google//modules/beta-public-cluster"
+  #version                    = "v9.0.0"
   project_id                 = var.project_id
   region                     = var.region
   zones                      = var.zones
@@ -14,6 +15,7 @@ module "gke" {
   horizontal_pod_autoscaling = true
   network_policy             = true
   service_account            = var.service_account
+  release_channel            = "RAPID"
 
   node_pools = [
     {
@@ -27,7 +29,7 @@ module "gke" {
       image_type         = "COS"
       auto_repair        = true
       auto_upgrade       = true
-      #service_account    = var.service_account
+      service_account    = var.service_account
       preemptible        = false
       initial_node_count = var.initial_node_count
     },

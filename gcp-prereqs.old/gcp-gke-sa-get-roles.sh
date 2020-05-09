@@ -1,10 +1,9 @@
 #!/usr/bin/env sh
 set -x
 
-PROJECT=scandalizer
-ACCOUNT=tf-gcp
+PROJECT=${GCP_PROJECT_NAME:-cloud-native-data}
+ACCOUNT=${GCP_SERVICE_ACCOUNT:-polaris-testbed}
 
-#gcloud projects get-iam-policy <YOUR GCLOUD PROJECT>  \
 gcloud projects get-iam-policy ${PROJECT} \
 --flatten="bindings[].members" \
 --format='table(bindings.role)' \
