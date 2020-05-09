@@ -1,8 +1,7 @@
 #!/usr/bin/env sh
-set -euo pipefail
 
 PROJECT=${GCP_PROJECT_NAME:-cloud-native-data}
-ACCOUNT=${GCP_SERVICE_ACCOUNT:-polaris-testbed}
+ACCOUNT=${GCP_SERVICE_ACCOUNT:-polaris-testbed-08}
 
 REGION=us-west1
 BUCKET_BASE=${ACCOUNT}

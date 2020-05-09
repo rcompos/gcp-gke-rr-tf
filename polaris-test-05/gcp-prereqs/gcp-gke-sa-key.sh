@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PROJECT=${GCP_PROJECT_NAME:-cloud-native-data}
-ACCOUNT=${GCP_SERVICE_ACCOUNT:-polaris-testbed}
+ACCOUNT=${GCP_SERVICE_ACCOUNT:-polaris-test-05}
 
 set -x
 

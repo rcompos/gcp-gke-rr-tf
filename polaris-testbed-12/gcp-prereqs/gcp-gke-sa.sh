@@ -16,8 +16,8 @@ set -x
 #PROJECT=${GCP_PROJECT_NAME:-NetApp-HCL}
 #PROJECT=${GCP_PROJECT_NAME:-dev-datafabric}
 PROJECT=${GCP_PROJECT_NAME:-cloud-native-data}
-ACCOUNT=${GCP_SERVICE_ACCOUNT:-polaris-testbed}
-DISPLAY=${GCP_DISPLAY_NAME:-polaris-testbed}
+ACCOUNT=${GCP_SERVICE_ACCOUNT:-polaris-testbed-12}
+DISPLAY=${GCP_DISPLAY_NAME:-polaris-testbed-12}
 
 # Create service account
 gcloud iam service-accounts create ${ACCOUNT} --display-name ${DISPLAY}

@@ -1,0 +1,12 @@
+credentials        = "~/keys/polaris-testbed-07-keyfile.json"
+project_id         = "cloud-native-data"
+region             = "us-east4"
+zones              = ["us-east4-a", "us-east4-b", "us-east4-c"]
+name               = "polaris-testbed-07"
+machine_type       = "n1-standard-2"
+min_count          = 1
+max_count          = 3
+disk_size_gb       = 100
+initial_node_count = 1
+service_account    = "polaris-testbed-07@cloud-native-data.iam.gserviceaccount.com"
+#node_pool_default_meta = "polaris-testbed-07-nodepool"

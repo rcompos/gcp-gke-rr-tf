@@ -1,0 +1,7 @@
+# https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster
+
+# Create GCP GKE cluster with release channel
+# gcloud beta container clusters create cluster-name --zone compute-zone --release-channel channel
+
+# Example
+# gcloud beta container clusters create green-cat --zone us-west3-a --release-channel rapid
