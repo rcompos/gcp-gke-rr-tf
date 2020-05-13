@@ -1,7 +1,9 @@
 name               = "polaris-test-10"
 project_id         = "cloud-native-data"
-region             = "asia-northeast3"
-zones              = ["asia-northeast3-a", "asia-northeast3-b", "asia-northeast3-c"]
+#region             = "asia-northeast3"
+#zones              = ["asia-northeast3-a", "asia-northeast3-b", "asia-northeast3-c"]
+region             = "us-east1"
+zones              = ["us-east1-b", "us-east1-c", "us-east1-d"]
 machine_type       = "n1-standard-2"
 min_count          = 1
 max_count          = 3
