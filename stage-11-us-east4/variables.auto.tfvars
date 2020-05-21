@@ -1,0 +1,13 @@
+name               = "stage-11-us-east4"
+project_id         = "cloud-native-data"
+region             = "us-east4"
+zones              = ["us-east4-b"]
+machine_type       = "n1-standard-2"
+image_type         = "Ubuntu"
+min_count          = 3
+max_count          = 3
+disk_size_gb       = 100
+initial_node_count = 3
+service_account    = "polaris-test@cloud-native-data.iam.gserviceaccount.com"
+#node_pool_default_meta = "polaris-test-nodepool"
+credentials        = "~/keys/polaris-test-keyfile.json"
